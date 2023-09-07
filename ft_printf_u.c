@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_u.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arlee <arlee@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aaaaaran <aaaaaran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 21:42:38 by aaaaaran          #+#    #+#             */
-/*   Updated: 2023/09/07 16:36:48 by arlee            ###   ########.fr       */
+/*   Updated: 2023/09/08 07:43:39 by aaaaaran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_num_len(unsigned	int num)
+int ft_num_len(unsigned int num)
 {
-	int	len;
+	int len;
 
 	len = 0;
 	while (num != 0)
 	{
-		len++;
 		num = num / 10;
+		len++;
 	}
 	return (len);
 }
 
-char	*ft_uitoa(unsigned int n)
+char *ft_uitoa(unsigned int n)
 {
-	char	*num;
-	size_t	len;
+	char *num;
+	size_t len;
 
 	len = ft_num_len(n);
 	num = (char *)malloc(sizeof(char) * (len + 1));
@@ -44,10 +44,10 @@ char	*ft_uitoa(unsigned int n)
 	return (num);
 }
 
-int	ft_printf_u(unsigned int n)
+int ft_printf_u(unsigned int n)
 {
-	int		len;
-	char	*num;
+	int len;
+	char *num;
 
 	len = 0;
 	if (n == 0)

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arlee <arlee@student.42.fr>                +#+  +:+       +#+         #
+#    By: aaaaaran <aaaaaran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 23:39:41 by aaaaaran          #+#    #+#              #
-#    Updated: 2023/09/07 17:10:29 by arlee            ###   ########.fr        #
+#    Updated: 2023/09/08 08:30:46 by aaaaaran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,15 +34,18 @@ all:	$(NAME)
 
 
 $(NAME):	$(OBJ_FILES)
-	$(AR) $@ $^
-
-
+	@make -C $(LIBFT)
+	@cp $(LIBFT)/libft.a .
+	@mv libft.a $(NAME)
+	@$(AR) $@ $^
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
+	@make clean -C $(LIBFT)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@$(RM) $(LIBFT)/libft.a
 
 
 re:	fclean all
