@@ -6,19 +6,18 @@
 #    By: aaaaaran <aaaaaran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 23:39:41 by aaaaaran          #+#    #+#              #
-#    Updated: 2023/09/08 08:30:46 by aaaaaran         ###   ########.fr        #
+#    Updated: 2023/09/08 08:33:39 by aaaaaran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
-CC = gcc
-RM = rm -f 
-CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
-LIBFT		= libft
+NAME	= libftprintf.a
+CC 		= gcc
+RM 		= rm -f 
+CFLAGS 	= -Wall -Wextra -Werror
+AR 		= ar rcs
+LIBFT	= libft
 
-SRCS = \
-		ft_printf.c \
+SRCS = 	ft_printf.c \
 		ft_printf_n.c \
 		ft_printf_p.c \
 		ft_printf_s.c \
