@@ -6,7 +6,7 @@
 #    By: aaaaaran <aaaaaran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 23:39:41 by aaaaaran          #+#    #+#              #
-#    Updated: 2023/09/08 08:33:39 by aaaaaran         ###   ########.fr        #
+#    Updated: 2023/09/08 09:19:42 by aaaaaran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,29 +24,27 @@ SRCS = 	ft_printf.c \
 		ft_printf_u.c \
 		ft_printf_hex.c
 
-
 OBJS =	$(SRCS:%.c=%.o)
-
-OBJ_FILES =	$(OBJS)
 
 all:	$(NAME)
 
 
-$(NAME):	$(OBJ_FILES)
-	@make -C $(LIBFT)
-	@cp $(LIBFT)/libft.a .
-	@mv libft.a $(NAME)
-	@$(AR) $@ $^
+$(NAME):	$(OBJS) $(LIBFT)/libft.a
+	$(AR) $@ $^
+
+$(LIBFT)/libft.a:
+	$(MAKE) -C $(LIBFT)
 
 clean:
-	@$(RM) $(OBJS)
-	@make clean -C $(LIBFT)
+	$(RM) $(OBJS)
+	$(MAKE) -C $(LIBFT) clean
 
 fclean: clean
-	@$(RM) $(NAME)
-	@$(RM) $(LIBFT)/libft.a
+	$(RM) $(NAME)
+	$(RM) $(LIBFT)/libft.a
 
 
 re:	fclean all
 
 .PHONY :	all clean fclean re
+
