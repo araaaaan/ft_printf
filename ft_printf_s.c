@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_s.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arlee <arlee@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aaaaaran <aaaaaran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 21:42:29 by aaaaaran          #+#    #+#             */
-/*   Updated: 2023/09/07 17:03:36 by arlee            ###   ########.fr       */
+/*   Updated: 2023/09/08 20:30:51 by aaaaaran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
+//char *str(문자열포인터) 출력과 길이를 반환(한글자씩)
 int	ft_printf_s(char *str)
 {
 	int	i;

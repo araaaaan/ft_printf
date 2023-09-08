@@ -6,13 +6,13 @@
 /*   By: aaaaaran <aaaaaran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 21:42:07 by aaaaaran          #+#    #+#             */
-/*   Updated: 2023/09/08 08:02:29 by aaaaaran         ###   ########.fr       */
+/*   Updated: 2023/09/08 20:32:02 by aaaaaran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
-
+//libft에서 사용한 itoa사용(int to ascii), 음수처리, 최대값처리, 메모리할당이 관건
 int ft_printf_n(int num)
 {
 	int len;
